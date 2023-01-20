@@ -45,7 +45,7 @@ export default function Editor(props: EditorProps) {
         // window.localStorage.setItem("lestariDraft", JSON.stringify(data));
         // console.log(window.localStorage.getItem("lestariDraft"));
         props.parentCallback(data);
-    }, []);
+    }, [props]);
 
     if (props.onSave === true) {
         handleSave();

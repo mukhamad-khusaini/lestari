@@ -58,7 +58,7 @@ export default function DraftContinue() {
         } else {
             initialRef.current = true;
         }
-    }, []);
+    }, [router.query]);
 
     // Auto-save state
     const autoSaveRef = useRef(false);

@@ -1,5 +1,6 @@
 import styles from "../styles/SideEditor.module.css";
 import AddIcon from "@mui/icons-material/Add";
+import Link from "next/link";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 // import dynamic from "next/dynamic";
 // const ListOverlay = dynamic(() => import("./ListOverlay"), {
@@ -11,11 +12,11 @@ export default function SideEditor() {
         <div className={styles.side}>
             {/* Add action */}
             <div className={styles.actionContainer}>
-                <a href="/editor/draft-editor">
+                <Link href={"/editor/draft-editor"}>
                     <div className={styles.action}>
                         <AddIcon fontSize="large" color="success" />
                     </div>
-                </a>
+                </Link>
             </div>
 
             {/* Delete action */}
