@@ -63,7 +63,7 @@ export default function DraftEditorSide(props: DraftEditorSideProps) {
     };
 
     const loader = ({ src, quality, width }: any) => {
-        return `https://${process.env.BASE_URL}/${src}?w=${width}&q=${quality || 75}`;
+        return `${process.env.BASE_URL}/${src}?w=${width}&q=${quality || 75}`;
     };
 
     return (
@@ -74,7 +74,7 @@ export default function DraftEditorSide(props: DraftEditorSideProps) {
                         <ArrowBackIcon fontSize="medium" color="success" />
                     </div>
                 </Link>
-                <Image width={292} height={104} alt="lestari-logo" src="/images/logo.png" loader={loader} priority />
+                <Image width={292} height={104} alt="lestari-logo" src="images/logo.png" loader={loader} priority />
             </div>
             <form className={styles.form} ref={formRef} onClick={(e) => e.preventDefault}>
                 <div className={styles.inputGroup}>
