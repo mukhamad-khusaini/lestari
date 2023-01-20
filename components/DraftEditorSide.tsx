@@ -63,7 +63,7 @@ export default function DraftEditorSide(props: DraftEditorSideProps) {
     };
 
     const loader = ({ src, quality, width }: any) => {
-        return `${process.env.baseurl}/${src}?w=${width}&q=${quality || 75}`;
+        return `https://${process.env.baseurl}/${src}?w=${width}&q=${quality || 75}`;
     };
 
     return (
