@@ -74,7 +74,7 @@ export default function DraftEditorSide(props: DraftEditorSideProps) {
                         <ArrowBackIcon fontSize="medium" color="success" />
                     </div>
                 </Link>
-                <Image width={292} height={104} alt="lestari-logo" src="images/logo.png" loader={loader} priority />
+                <Image width={180} height={64} alt="lestari-logo" src="images/logo.png" loader={loader} priority />
             </div>
             <form className={styles.form} ref={formRef} onClick={(e) => e.preventDefault}>
                 <div className={styles.inputGroup}>
