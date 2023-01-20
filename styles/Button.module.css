@@ -1,0 +1,47 @@
+.buttonContained {
+    min-width: 9rem;
+    background-color: var(--green-medium-light);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-family: var(--nunito-sans);
+    font-weight: 600;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonContainedWhite {
+    min-width: 9rem;
+    background-color: white;
+    color: var(--green-medium-light);
+    padding: 0.5rem 1rem;
+    font-family: var(--nunito-sans);
+    font-weight: 600;
+    border-radius: 0.3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonOutlined {
+    min-width: 9rem;
+    background: transparent;
+    border: 2px solid var(--green-medium-light);
+    color: var(--green-medium-light);
+    padding: 0.5rem 1rem;
+    font-family: var(--nunito-sans);
+    font-weight: 600;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.buttonOutlinedWhite {
+    min-width: 9rem;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-family: var(--nunito-sans);
+    font-weight: 600;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}

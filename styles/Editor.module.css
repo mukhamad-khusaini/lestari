@@ -1,0 +1,8 @@
+.draftContainer {
+    min-height: 100vh;
+    margin-left: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+}

@@ -1,0 +1,55 @@
+.listOverlay {
+    position: fixed;
+    width: 50rem;
+    height: 30rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #000000;
+    box-shadow: -6px 9px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 14.1px;
+    font-family: var(--nunito-sans);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.heading {
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.heading h2 {
+    font-size: 1.1rem;
+    color: var(--green-medium-light);
+}
+
+.iconContainer {
+    display: flex;
+    height: 100%;
+    aspect-ratio: 1;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    padding: 1 3rem;
+}
+
+.draftListContainer {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 4rem;
+    overflow-y: scroll;
+    gap: 1rem;
+}
