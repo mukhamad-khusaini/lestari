@@ -7,6 +7,7 @@ import Image from "next/image";
 import Logo from "../public/images/logo.png";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Button from "./Button";
+import process from "process";
 
 export default function DraftEditorSide(props: DraftEditorSideProps) {
     const formRef: any = useRef();
@@ -61,6 +62,10 @@ export default function DraftEditorSide(props: DraftEditorSideProps) {
         }
     };
 
+    const loader = ({ src, quality, width }: any) => {
+        return `${process.env.baseurl}/${src}?w=${width}&q=${quality || 75}`;
+    };
+
     return (
         <div className={styles.draftSide}>
             <div className={styles.imageContainer}>
@@ -69,7 +74,7 @@ export default function DraftEditorSide(props: DraftEditorSideProps) {
                         <ArrowBackIcon fontSize="medium" color="success" />
                     </div>
                 </Link>
-                <Image width={150} alt="lestari-logo" src={Logo} priority />
+                <Image width={292} height={104} alt="lestari-logo" src="/images/logo.png" loader={loader} priority />
             </div>
             <form className={styles.form} ref={formRef} onClick={(e) => e.preventDefault}>
                 <div className={styles.inputGroup}>
