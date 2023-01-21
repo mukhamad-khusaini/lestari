@@ -59,3 +59,27 @@ export interface ArticleData {
     content: EditorOutput;
     category: string;
 }
+
+export interface DialogTitleProps {
+    id: string;
+    children?: React.ReactNode;
+    onClose: () => void;
+}
+
+export interface ModalBox {
+    title: string;
+    handleClose: () => void;
+    open: boolean;
+    draftList: ArticleData[];
+    handleDelete?: any;
+    handleDownload?: any;
+}
+
+export interface CardOverlay {
+    _id: string;
+    title: string;
+    date: string | number;
+    type: "delete" | "download";
+    handleDelete?: any;
+    handleDownload?: any;
+}

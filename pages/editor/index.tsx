@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import styles from "../../styles/Editor.module.css";
-import SideEditor from "../../components/SideEditor";
+const SideEditor = dynamic(() => import("../../components/SideEditor"), { ssr: false });
 
 const DraftList = dynamic(() => import("../../components/DraftList"), {
     ssr: false,

@@ -10,7 +10,7 @@
     /* Color variables */
     --green-dark: rgba(25, 107, 61, 1);
     --green-medium: rgba(35, 149, 84, 1);
-    --green-medium-light: rgba(45, 190, 107, 1);
+    --green-medium-light: #2dbe6b;
     --green-light: rgba(73, 212, 133, 1);
     --green-light-thin: rgba(115, 222, 161, 1);
     --green-medium-fade: rgba(156, 232, 189, 1);

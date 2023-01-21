@@ -1,11 +1,21 @@
+import { useState } from "react";
 import type { DraftList } from "../Interface";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import Link from "next/link";
 import styles from "../styles/DraftList.module.css";
 import Button from "./Button";
 import DraftCard from "./DraftCard";
 import defaultDraftValue from "./utils/DefaultDraft";
+const ModalBox = dynamic(() => import("./ModalBox"), {
+    ssr: false,
+});
 
 export default function DraftList() {
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
     // set default draft if nothing in local storage
     if (!window.localStorage.getItem("lestariDraft")) {
         window.localStorage.setItem("lestariDraft", JSON.stringify(defaultDraftValue));
@@ -15,8 +25,6 @@ export default function DraftList() {
     const localDraft: any = window.localStorage.getItem("lestariDraft");
     const { draftList }: DraftList = JSON.parse(localDraft);
 
-    // Get formated date
-
     // if empty
     if (draftList.length === 0) {
         return (
@@ -24,9 +32,14 @@ export default function DraftList() {
                 <Image priority style={{ opacity: 0.3 }} alt="empty image" width={200} height={200} src="/images/empty.png" />
                 <p className={styles.nothing}>There are no drafts in your local storage</p>
                 <div className={styles.buttonContainer}>
-                    <Button variant="contained">Create Draft</Button>
-                    <Button variant="outlined">Download Draft</Button>
+                    <Link href={"/editor/draft-editor"}>
+                        <Button variant="contained">Create Draft</Button>
+                    </Link>
+                    <Button onClick={handleOpen} variant="outlined">
+                        Download Draft
+                    </Button>
                 </div>
+                <ModalBox draftList={draftList} open={open} title="Download Draft Dari Server" handleClose={handleClose} />
             </div>
         );
     }

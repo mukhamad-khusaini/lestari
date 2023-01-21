@@ -62,10 +62,6 @@ export default function DraftEditorSide(props: DraftEditorSideProps) {
         }
     };
 
-    const loader = ({ src, quality, width }: any) => {
-        return `https://lestari.vercel.app/${src}?w=${width}&q=${quality || 75}`;
-    };
-
     return (
         <div className={styles.draftSide}>
             <div className={styles.imageContainer}>
@@ -74,7 +70,7 @@ export default function DraftEditorSide(props: DraftEditorSideProps) {
                         <ArrowBackIcon fontSize="medium" color="success" />
                     </div>
                 </Link>
-                <Image width={180} height={64} alt="lestari-logo" src="images/logo.png" loader={loader} priority />
+                <Image width={180} height={64} alt="lestari-logo" src="/images/logo.png" priority />
             </div>
             <form className={styles.form} ref={formRef} onClick={(e) => e.preventDefault}>
                 <div className={styles.inputGroup}>
